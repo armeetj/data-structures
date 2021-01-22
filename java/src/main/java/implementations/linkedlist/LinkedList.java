@@ -5,14 +5,14 @@ package implementations.linkedlist;
 
 public class LinkedList
 {
-    private LinkedListNode firstNode;
+    private LinkedListNode head;
 
     /**
      * default constructor
      */
     public LinkedList()
     {
-        firstNode = null;
+        head = null;
     }
 
     /**
@@ -22,9 +22,62 @@ public class LinkedList
     public LinkedList(int value)
     {
         // create first node
-        firstNode = new LinkedListNode(value, null);
+        head = new LinkedListNode(value, null);
     }
 
+    /**
+     * to String
+     * @return
+     */
+    @Override
+    public String toString()
+    {
+        String list = "[";
+        LinkedListNode current = head;
+        if(current == null) return null;
 
+        do
+        {
+            list += Integer.toString(current.getValue()) + ", ";
+            current = current.getNext();
+        }
+        while (current != null);
+
+        list = list.substring(0, list.length() - 2);
+        return list + "]";
+    }
+
+    /**
+     * add new element (node) to linked list
+     * @param value
+     */
+    public void add(int value)
+    {
+        LinkedListNode tail = getTail();
+        if (tail == null)
+        {
+            head = new LinkedListNode(value, null);
+            return;
+        }
+
+        tail.setNext(new LinkedListNode(value, null));
+    }
+
+    /**
+     * traverse and get tail of linked list
+     * @return
+     */
+    public LinkedListNode getTail()
+    {
+        LinkedListNode current = head;
+        if(current == null) return null;
+
+        while (current.getNext() != null)
+        {
+            current = current.getNext();
+        }
+
+        return current;
+    }
 
 }

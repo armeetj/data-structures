@@ -11,9 +11,9 @@ import java.util.UUID;
 @Setter
 public class LinkedListNode extends Node
 {
-    private UUID next;
+    private LinkedListNode next;
 
-    public LinkedListNode(int value, UUID next)
+    public LinkedListNode(int value, LinkedListNode next)
     {
         super(value);
         this.next = next;
