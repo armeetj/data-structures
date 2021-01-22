@@ -85,7 +85,6 @@ public class LinkedList
     {
         LinkedListNode popped = head;
         head = head.getNext();
-
         return popped.getValue();
     }
 

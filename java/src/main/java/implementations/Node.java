@@ -18,4 +18,9 @@ public class Node
         this.ID = UUID.randomUUID();
         this.value = value;
     }
+
+    public int value()
+    {
+        return this.value;
+    }
 }

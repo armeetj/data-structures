@@ -18,4 +18,9 @@ public class LinkedListNode extends Node
         super(value);
         this.next = next;
     }
+
+    public LinkedListNode next()
+    {
+        return this.next;
+    }
 }

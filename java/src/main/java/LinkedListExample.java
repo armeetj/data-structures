@@ -4,6 +4,7 @@
  * ./implementations/linkedlist/LinkedList
  */
 
+import implementations.linkedlist.CircularLinkedList;
 import implementations.linkedlist.LinkedList;
 
 public class LinkedListExample
@@ -17,5 +18,11 @@ public class LinkedListExample
         System.out.println(list.pop());
         System.out.println(list.pop());
         System.out.println(list.toString());
+
+        CircularLinkedList clist = new CircularLinkedList();
+        clist.add(1);
+        clist.add(2);
+        clist.add(3);
+        System.out.println(clist.head().next().next().next().value());
     }
 }
