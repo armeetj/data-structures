@@ -1,4 +1,4 @@
-package implementations.stack;
+import implementations.stack.Stack;
 
 public class StackExample
 {

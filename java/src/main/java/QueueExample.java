@@ -1,4 +1,4 @@
-package implementations.queue;
+import implementations.queue.Queue;
 
 public class QueueExample
 {
