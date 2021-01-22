@@ -3,6 +3,9 @@
 
 package implementations.linkedlist;
 
+import lombok.Setter;
+
+@Setter
 public class LinkedList
 {
     private LinkedListNode head;
@@ -81,11 +84,11 @@ public class LinkedList
      * pop (remove head of linkedlist)
      * @return
      */
-    public int pop()
+    public LinkedListNode pop()
     {
         LinkedListNode popped = head;
         head = head.getNext();
-        return popped.getValue();
+        return popped;
     }
 
     /**
